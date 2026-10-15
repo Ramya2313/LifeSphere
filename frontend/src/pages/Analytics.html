@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeSphere | Analytics</title>
+  <link rel="stylesheet" href="analytics.css">
+  <script src="analytics.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="dashboard.html">🌿 LifeSphere<span>.</span></a>
+    <p class="sidebar-label">YOUR WORKSPACE</p>
+    <nav>
+      <a href="dashboard.html">🏠 Dashboard</a>
+      <a href="goals.html">🎯 Goals</a>
+      <a href="tasks.html">✓ Tasks</a>
+      <a href="calendar.html">📅 Calendar</a>
+      <a href="healthwellness.html">🌿 Health & Wellness</a>
+      <a href="study.html">📚 Study Planner</a>
+      <a href="notes.html">📝 Notes</a>
+      <a href="finance.html">💰 Finance</a>
+      <a href="contact.html">✉️ Contact</a>
+      <a href="profile.html">👤 Profile</a>
+      <a class="active" href="analytics.html">📊 Analytics</a>
+      <a href="settings.html">⚙️ Settings</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL REPORT</p>
+        <h1>📊 LifeSphere Analytics</h1>
+        <p>Understand your progress across your workspace.</p>
+      </div>
+      <a class="back-link" href="dashboard.html">← Dashboard</a>
+    </header>
+
+    <section class="welcome">
+      <div>
+        <p class="eyebrow light">YOUR JOURNEY AT A GLANCE</p>
+        <h2>Small steps. Real progress.</h2>
+        <p>Review your goals, tasks, learning, wellness and finances.</p>
+      </div>
+      <span class="welcome-icon">✦</span>
+    </section>
+
+    <section class="section-heading">
+      <div>
+        <h2>Workspace overview</h2>
+        <p>Information found in your browser's saved data.</p>
+      </div>
+      <button id="refreshButton" type="button">↻ Refresh report</button>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card purple">
+        <span class="icon">🎯</span>
+        <p>Total goals</p>
+        <h3 id="goalsTotal">—</h3>
+        <small id="goalsDetail">Checking saved data…</small>
+      </article>
+
+      <article class="stat-card blue">
+        <span class="icon">✓</span>
+        <p>Tasks</p>
+        <h3 id="tasksTotal">—</h3>
+        <small id="tasksDetail">Checking saved data…</small>
+      </article>
+
+      <article class="stat-card pink">
+        <span class="icon">📚</span>
+        <p>Study activities</p>
+        <h3 id="studyTotal">—</h3>
+        <small id="studyDetail">Checking saved data…</small>
+      </article>
+
+      <article class="stat-card green">
+        <span class="icon">📝</span>
+        <p>Saved notes</p>
+        <h3 id="notesTotal">—</h3>
+        <small id="notesDetail">Checking saved data…</small>
+      </article>
+    </section>
+
+    <section class="section-heading">
+      <div>
+        <h2>All 12 pages</h2>
+        <p>Open a module or review its saved-data summary.</p>
+      </div>
+    </section>
+
+    <section id="moduleGrid" class="module-grid">
+      <article class="module-card"><span>🏠</span><h3>Dashboard</h3><p>Overall workspace</p><strong>Loading…</strong><a href="dashboard.html">Open page →</a></article>
+      <article class="module-card"><span>🎯</span><h3>Goals</h3><p>Goals and progress</p><strong>Loading…</strong><a href="goals.html">Open page →</a></article>
+      <article class="module-card"><span>✓</span><h3>Tasks</h3><p>Task management</p><strong>Loading…</strong><a href="tasks.html">Open page →</a></article>
+      <article class="module-card"><span>📅</span><h3>Calendar</h3><p>Events and dates</p><strong>Loading…</strong><a href="calendar.html">Open page →</a></article>
+      <article class="module-card"><span>🌿</span><h3>Health & Wellness</h3><p>Mood and habits</p><strong>Loading…</strong><a href="healthwellness.html">Open page →</a></article>
+      <article class="module-card"><span>📚</span><h3>Study Planner</h3><p>Study tasks and sessions</p><strong>Loading…</strong><a href="study.html">Open page →</a></article>
+      <article class="module-card"><span>📝</span><h3>Notes</h3><p>Saved ideas and notes</p><strong>Loading…</strong><a href="notes.html">Open page →</a></article>
+      <article class="module-card"><span>💰</span><h3>Finance</h3><p>Income and spending</p><strong>Loading…</strong><a href="finance.html">Open page →</a></article>
+      <article class="module-card"><span>✉️</span><h3>Contact</h3><p>Feedback and messages</p><strong>Loading…</strong><a href="contact.html">Open page →</a></article>
+      <article class="module-card"><span>👤</span><h3>Profile</h3><p>Personal information</p><strong>Loading…</strong><a href="profile.html">Open page →</a></article>
+      <article class="module-card"><span>📊</span><h3>Analytics</h3><p>This report</p><strong>Active</strong><a href="analytics.html">Current page →</a></article>
+      <article class="module-card"><span>⚙️</span><h3>Settings</h3><p>Saved preferences</p><strong>Loading…</strong><a href="settings.html">Open page →</a></article>
+    </section>
+
+    <section class="section-heading">
+      <div>
+        <h2>Finance report</h2>
+        <p>Calculated from saved transactions when available.</p>
+      </div>
+    </section>
+
+    <section class="finance-grid">
+      <article class="finance-card">
+        <p>Total income</p>
+        <h2 id="income">₹0.00</h2>
+      </article>
+      <article class="finance-card">
+        <p>Total expenses</p>
+        <h2 id="expenses">₹0.00</h2>
+      </article>
+      <article class="finance-card">
+        <p>Remaining balance</p>
+        <h2 id="balance">₹0.00</h2>
+      </article>
+    </section>
+
+    <section class="report-card">
+      <h2>📈 Activity summary</h2>
+      <p id="overallSummary">Preparing your report…</p>
+      <div class="progress-track">
+        <div id="taskProgress" class="progress-fill"></div>
+      </div>
+      <p id="taskProgressText">Task completion: not enough data yet.</p>
+    </section>
+
+    <section class="report-card">
+      <h2>Data and privacy</h2>
+      <p id="reportStatus" role="status">
+        Your report is generated from browser storage. Some modules may use different storage keys.
+      </p>
+      <button id="showStorageButton" type="button">Show detected storage keys</button>
+      <ul id="storageList" hidden></ul>
+    </section>
+
+    <footer>Made with ♥ for a more balanced life · LifeSphere</footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeSphere | Study & Learning</title>
+  <link rel="stylesheet" href="studyplanner.css">
+  <script src="studyplanner.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <a class="back-link" href="dashboard.html">← Back to Dashboard</a>
+      <a class="brand" href="dashboard.html">🌿 LifeSphere<span>.</span></a>
+    </header>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">YOUR LEARNING JOURNEY</p>
+        <h1>📚 Study & Learning</h1>
+        <p>Build good study habits, stay organized, and celebrate your progress one step at a time.</p>
+      </div>
+      <div class="hero-icon">🎓</div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card purple">
+        <div class="stat-icon">📝</div>
+        <p>Tasks completed</p>
+        <h2 id="completedCount">0</h2>
+      </article>
+      <article class="stat-card pink">
+        <div class="stat-icon">📌</div>
+        <p>Tasks remaining</p>
+        <h2 id="remainingCount">0</h2>
+      </article>
+      <article class="stat-card green">
+        <div class="stat-icon">⏱️</div>
+        <p>Study sessions today</p>
+        <h2 id="sessionsCount">0</h2>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <section class="card add-card">
+        <p class="eyebrow">STAY ORGANIZED</p>
+        <h2>➕ Add a Study Task</h2>
+        <p class="muted">Break your learning into small, achievable tasks.</p>
+
+        <form id="studyForm">
+          <label for="taskName">Task name</label>
+          <input id="taskName" type="text" placeholder="e.g. Revise chapter 3" required maxlength="120">
+
+          <label for="subject">Subject</label>
+          <select id="subject" required>
+            <option value="">Choose a subject</option>
+            <option>Mathematics</option>
+            <option>Science</option>
+            <option>English</option>
+            <option>Computer Science</option>
+            <option>Social Studies</option>
+            <option>Languages</option>
+            <option>Exam Preparation</option>
+            <option>Other</option>
+          </select>
+
+          <label for="priority">Priority</label>
+          <select id="priority">
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Low">Low</option>
+          </select>
+
+          <label for="dueDate">Due date</label>
+          <input id="dueDate" type="date">
+
+          <button class="primary-btn" type="submit">＋ Add Study Task</button>
+          <p id="formMessage" role="status"></p>
+        </form>
+
+        <div class="encouragement">
+          <span>💡</span>
+          <div><strong>Small steps make a difference!</strong>
+            <p>Complete one task at a time and keep moving forward.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card tasks-card">
+        <p class="eyebrow">YOUR PLAN</p>
+        <h2>📋 My Study Tasks</h2>
+        <p class="muted"><span id="totalCount">0</span> tasks</p>
+
+        <label for="taskFilter">Show tasks</label>
+        <select id="taskFilter">
+          <option value="all">All tasks</option>
+          <option value="remaining">Remaining</option>
+          <option value="completed">Completed</option>
+        </select>
+
+        <div id="taskList" class="task-list">
+          <div class="empty-state">
+            <span>📚</span>
+            <h3>Your study journey starts here!</h3>
+            <p>Add your first study task to get started.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="card timer-card">
+      <p class="eyebrow">FOCUS MODE</p>
+      <h2>⏳ Study Focus Timer</h2>
+      <p class="muted">Focus on one thing at a time. Take breaks when you need them.</p>
+
+      <div class="timer-options">
+        <button type="button" class="time-option active" data-minutes="25">25 min</button>
+        <button type="button" class="time-option" data-minutes="45">45 min</button>
+        <button type="button" class="time-option" data-minutes="60">60 min</button>
+      </div>
+
+      <div class="timer-circle">
+        <span id="timerDisplay">25:00</span>
+        <small>FOCUS TIME</small>
+      </div>
+
+      <p id="timerMessage" role="status">Ready when you are!</p>
+      <div class="timer-actions">
+        <button id="startTimer" class="primary-btn" type="button">▶ Start Studying</button>
+        <button id="resetTimer" class="secondary-btn" type="button">↻ Reset</button>
+      </div>
+      <p class="timer-tip">🌱 Tip: Put your phone aside, choose a task, and give it your full attention.</p>
+    </section>
+
+    <footer>🌿 LifeSphere — Learn a little every day. Grow a little every day.</footer>
+  </main>
+</body>
+</html>

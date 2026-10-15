@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeSphere | My Calendar</title>
+
+  <link rel="stylesheet" href="calendar.css">
+  <script src="calendar.js" defer></script>
+
+  <!-- Paste the colorful style code here -->
+  <style>
+    body {
+      background: linear-gradient(
+        135deg,
+        #ff69b4,
+        #9370db,
+        #00bfff,
+        #7fffd4
+      ) !important;
+      font-family: Arial, sans-serif !important;
+      padding: 20px !important;
+    }
+
+    h1 {
+      color: #4b0082 !important;
+    }
+
+    .hero, .card {
+      padding: 25px !important;
+      margin: 15px 0 !important;
+      border-radius: 20px !important;
+      background: rgba(255, 255, 255, 0.8) !important;
+      box-shadow: 0 5px 20px #7773 !important;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <a href="dashboard.html" class="brand">🌿 LifeSphere</a>
+  <span>Live Better ✨ Plan Smarter ✨ Grow Happier</span>
+</header>
+
+<main class="container">
+  <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+
+  <section class="hero">
+    <p class="eyebrow">YOUR PERSONAL PLANNER</p>
+    <h1>📅 My Calendar</h1>
+    <p>Plan your days. Remember what matters.</p>
+    <div class="hero-decoration">✨ 🌸 🌿</div>
+  </section>
+
+  <div class="planner-grid">
+    <section class="card calendar-card">
+      <div class="month-header">
+        <button id="prevMonth" type="button">← Previous</button>
+        <h2 id="monthTitle"></h2>
+        <button id="nextMonth" type="button">Next →</button>
+      </div>
+
+      <div class="weekdays">
+        <span>Sun</span><span>Mon</span><span>Tue</span>
+        <span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+      </div>
+
+      <div id="calendarDays" class="calendar-days"></div>
+
+      <div class="legend">
+        <span><i class="dot today-dot"></i> Today</span>
+        <span><i class="dot selected-dot"></i> Selected date</span>
+        <span><i class="dot event-dot"></i> Has events</span>
+      </div>
+
+      <p id="selectedDate" class="selected-date"></p>
+    </section>
+
+    <div class="right-column">
+      <section class="card event-card">
+        <div class="card-heading">✨ MAKE IT HAPPEN</div>
+
+        <div class="card-content">
+          <h2>🌸 Add an Event</h2>
+          <p>Make time for what matters to you.</p>
+
+          <form id="eventForm">
+            <label for="eventName">Event name</label>
+            <input id="eventName" type="text"
+              placeholder="e.g. Study for exams" maxlength="100" required>
+
+            <label for="eventDate">Event date</label>
+            <input id="eventDate" type="date" required>
+
+            <label for="eventTime">Time (optional)</label>
+            <input id="eventTime" type="time">
+
+            <button class="primary-button" type="submit">
+              ＋ Save Event
+            </button>
+            <p id="eventMessage" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <aside class="tip-card">
+        <h3>💡 Plan with purpose!</h3>
+        <p>Little plans help create wonderful days. 🌱</p>
+      </aside>
+    </div>
+  </div>
+
+  <section class="card saved-card">
+    <div class="saved-heading">
+      <div>
+        <p class="eyebrow">YOUR SCHEDULE</p>
+        <h2>📌 Saved Events</h2>
+        <p>Keep track of your plans.</p>
+      </div>
+
+      <label class="show-all">
+        <input id="showAllEvents" type="checkbox">
+        Show all
+      </label>
+    </div>
+
+    <div id="eventsList"></div>
+  </section>
+
+  <footer>
+    Made with ♥ for a more balanced life · LifeSphere 🌿
+  </footer>
+</main>
+
+</body>
+</html>

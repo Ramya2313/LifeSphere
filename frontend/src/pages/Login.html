@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeSphere | Login</title>
+  <link rel="stylesheet" href="auth.css">
+  <script src="login.js" defer></script>
+</head>
+<body>
+  <main class="login-container">
+    <section class="welcome-panel">
+      <div class="logo">🌿 LifeSphere</div>
+      <div class="welcome-content">
+        <span class="tagline">YOUR LIFE, YOUR JOURNEY</span>
+        <h1>Make every day<br>count! ✨</h1>
+        <p>Plan your goals, organize your tasks, and build a happier, healthier life.</p>
+        <div class="features">
+          <span>🎯 Achieve your goals</span>
+          <span>📚 Grow your knowledge</span>
+          <span>🌸 Take care of yourself</span>
+        </div>
+      </div>
+      <div class="decoration decoration-one">✦</div>
+      <div class="decoration decoration-two">✿</div>
+    </section>
+
+    <section class="form-panel">
+      <div class="form-heading">
+        <div class="small-logo">🌈</div>
+        <h2>Welcome Back!</h2>
+        <p>Sign in to continue to your LifeSphere.</p>
+      </div>
+
+      <form id="loginForm">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          autocomplete="email"
+          required
+        >
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          autocomplete="current-password"
+          required
+        >
+
+        <div class="form-options">
+          <label class="remember">
+            <input type="checkbox" id="rememberMe">
+            Remember me
+          </label>
+          <a href="register.html">Create account?</a>
+        </div>
+
+        <p id="message" role="status" aria-live="polite"></p>
+
+        <button type="submit" class="login-button">Log In <span>→</span></button>
+      </form>
+
+      <p class="signup-text">
+        New to LifeSphere? <a href="register.html">Create an account</a>
+      </p>
+
+      <p class="footer-text">Made with 💜 for a more balanced life</p>
+    </section>
+  </main>
+</body>
+</html>

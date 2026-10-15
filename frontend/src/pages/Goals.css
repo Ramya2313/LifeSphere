@@ -1,0 +1,135 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px 16px;
+  font-family: Arial, sans-serif;
+  background: #f5f3fc;
+  color: #29243b;
+}
+
+.container {
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
+}
+
+.back-link {
+  color: #6c4bd3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header {
+  margin: 25px 0;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #777;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(40, 30, 70, 0.07);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d8d3e5;
+  border-radius: 8px;
+  font-size: 15px;
+  background: white;
+}
+
+input:focus {
+  outline: 2px solid #c8b8ff;
+  border-color: #6c4bd3;
+}
+
+button {
+  padding: 12px 20px;
+  background: #6c4bd3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5638b7;
+}
+
+.goal-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.goal-item:last-child {
+  border-bottom: none;
+}
+
+.goal-item h3 {
+  margin: 0 0 7px;
+  overflow-wrap: anywhere;
+}
+
+.goal-item p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.delete-button {
+  background: #d94343;
+  flex-shrink: 0;
+}
+
+.delete-button:hover {
+  background: #b52e2e;
+}
+
+#goalMessage {
+  color: #26734e;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 18px;
+  }
+
+  .goal-item {
+    align-items: flex-start;
+  }
+}

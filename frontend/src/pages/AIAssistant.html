@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeSphere | AI Assistant</title>
+  <link rel="stylesheet" href="aiassistant.css">
+  <script src="aiassistant.js" defer></script>
+</head>
+<body>
+  <main class="app-container">
+
+    <header class="page-header">
+      <div class="brand">
+        <span class="brand-icon">🌿</span>
+        <span>LifeSphere</span>
+      </div>
+
+      <a href="dashboard.html" class="back-link">← Dashboard</a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-icon">✨</div>
+      <div>
+        <p class="eyebrow">YOUR PERSONAL COMPANION</p>
+        <h1>AI Assistant</h1>
+        <p>Ask questions, explore ideas, and take your next step.</p>
+      </div>
+    </section>
+
+    <section class="assistant-layout">
+
+      <div class="chat-panel">
+        <div class="chat-header">
+          <div class="assistant-avatar">🤖</div>
+          <div>
+            <h2>LifeSphere Assistant</h2>
+            <p><span class="online-dot"></span> Ready to help</p>
+          </div>
+          <button id="clearChat" class="clear-button" type="button">
+            Clear chat
+          </button>
+        </div>
+
+        <div
+          id="chatMessages"
+          class="chat-messages"
+          role="log"
+          aria-live="polite"
+          aria-label="Chat messages"
+        >
+          <div class="message assistant-message">
+            <div class="message-avatar">🤖</div>
+            <div class="message-content">
+              <p class="message-label">LifeSphere Assistant</p>
+              <div class="bubble">
+                Hello! 👋 Welcome to LifeSphere. I can help you explore
+                study tips, budgeting ideas, wellness habits, and goal planning.
+                What would you like help with today?
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="suggestion-area">
+          <p>Try asking about:</p>
+          <div class="suggestion-buttons">
+            <button class="suggestion-btn" data-prompt="Give me study tips">
+              📚 Study tips
+            </button>
+            <button class="suggestion-btn" data-prompt="How can I manage my budget?">
+              💰 Budgeting
+            </button>
+            <button class="suggestion-btn" data-prompt="Suggest simple wellness habits">
+              🌿 Wellness
+            </button>
+            <button class="suggestion-btn" data-prompt="Help me plan my goals">
+              🎯 Goal planning
+            </button>
+          </div>
+        </div>
+
+        <form id="chatForm" class="chat-form">
+          <label class="sr-only" for="userInput">Your message</label>
+          <textarea
+            id="userInput"
+            rows="1"
+            maxlength="1000"
+            placeholder="Type your message here..."
+            required
+          ></textarea>
+          <button id="sendButton" type="submit" aria-label="Send message">
+            ➤
+          </button>
+        </form>
+
+        <p class="privacy-note">
+          Demo assistant · Do not enter passwords or sensitive personal details.
+        </p>
+      </div>
+
+      <aside class="side-panel">
+        <section class="side-card">
+          <h2>💡 Quick Suggestions</h2>
+          <p>Choose a topic to get started.</p>
+
+          <button class="topic-button" data-prompt="Give me a simple daily study schedule">
+            <span>📖</span> Create a study schedule
+          </button>
+
+          <button class="topic-button" data-prompt="Give me tips to save money">
+            <span>💵</span> Learn to save money
+          </button>
+
+          <button class="topic-button" data-prompt="How can I build better daily habits?">
+            <span>🌱</span> Build better habits
+          </button>
+
+          <button class="topic-button" data-prompt="Help me break a big goal into small steps">
+            <span>🚀</span> Plan my next goal
+          </button>
+        </section>
+
+        <section class="motivation-card">
+          <span class="motivation-icon">🌈</span>
+          <h2>A little reminder</h2>
+          <p>
+            You don't have to do everything today.
+            One small step is still progress.
+          </p>
+        </section>
+
+        <section class="side-card">
+          <h2>✨ Helpful tip</h2>
+          <p>
+            Ask one clear question at a time. Start small, then build on
+            the answer that helps you most.
+          </p>
+        </section>
+      </aside>
+
+    </section>
+
+    <footer>
+      <p>🌿 LifeSphere — Your journey, one step at a time.</p>
+    </footer>
+  </main>
+</body>
+</html>

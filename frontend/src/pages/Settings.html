@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | LifeSphere</title>
+  <link rel="stylesheet" href="settings.css">
+  <script src="settings.js" defer></script>
+</head>
+<body>
+  <main class="settings-container">
+    <header class="page-header">
+      <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+      <h1>⚙️ Settings</h1>
+      <p>Customize your LifeSphere experience.</p>
+    </header>
+
+    <section class="settings-card">
+      <h2>👤 Account Preferences</h2>
+
+      <label for="displayName">Display name</label>
+      <input type="text" id="displayName" placeholder="Enter your display name">
+
+      <label for="theme">Color theme</label>
+      <select id="theme">
+        <option value="purple">Purple Dream</option>
+        <option value="pink">Pink Blossom</option>
+        <option value="blue">Ocean Blue</option>
+        <option value="green">Fresh Green</option>
+      </select>
+
+      <label class="toggle-row">
+        <span>
+          <strong>Compact layout</strong>
+          <small>Use smaller spacing between sections.</small>
+        </span>
+        <input type="checkbox" id="compactLayout">
+      </label>
+
+      <label class="toggle-row">
+        <span>
+          <strong>Show welcome message</strong>
+          <small>Display the welcome banner on your dashboard.</small>
+        </span>
+        <input type="checkbox" id="showWelcome" checked>
+      </label>
+
+      <div class="button-row">
+        <button type="button" id="saveSettings">Save Settings</button>
+        <button type="button" id="resetSettings" class="secondary">
+          Reset
+        </button>
+      </div>
+
+      <p id="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="settings-card">
+      <h2>🔐 Account</h2>
+      <p>Manage your current demo session.</p>
+      <button type="button" id="logoutButton" class="logout">
+        Log Out
+      </button>
+    </section>
+
+    <footer>Made with ♥ for a more balanced life · LifeSphere</footer>
+  </main>
+</body>
+</html>

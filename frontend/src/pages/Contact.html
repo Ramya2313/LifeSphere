@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeSphere | Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
+  <script src="contact.js" defer></script>
+</head>
+<body>
+
+  <main class="container">
+
+    <header class="hero">
+      <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+
+      <div class="hero-content">
+        <div>
+          <span class="eyebrow">WE'RE HERE FOR YOU</span>
+          <h1>💌 Contact Us</h1>
+          <p>
+            Have a question, suggestion, or feedback?
+            We'd love to hear from you.
+          </p>
+        </div>
+
+        <div class="hero-icon">💬</div>
+      </div>
+    </header>
+
+    <section class="welcome-card">
+      <span class="welcome-icon">🌿</span>
+      <div>
+        <h2>Let's connect!</h2>
+        <p>
+          Your feedback helps us make LifeSphere better.
+          Send us a message using the form below.
+        </p>
+      </div>
+    </section>
+
+    <div class="contact-layout">
+
+      <!-- Contact information -->
+      <section class="contact-info card">
+        <span class="section-label">GET IN TOUCH</span>
+        <h2>We'd love to hear from you!</h2>
+        <p class="description">
+          Share your thoughts, report a problem, or suggest a new feature.
+        </p>
+
+        <div class="info-item">
+          <span class="info-icon purple">📧</span>
+          <div>
+            <h3>Email Support</h3>
+            <p>Use the contact form to send your message.</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon pink">💡</span>
+          <div>
+            <h3>Share an Idea</h3>
+            <p>Tell us how we can improve your experience.</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon blue">🛠️</span>
+          <div>
+            <h3>Report a Problem</h3>
+            <p>Describe any issue you experience on the website.</p>
+          </div>
+        </div>
+
+        <div class="quote-box">
+          <span>✨</span>
+          <p>
+            "Small steps every day create a better tomorrow."
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact form -->
+      <section class="contact-form-card card">
+        <div class="form-heading">
+          <span class="section-label">SEND A MESSAGE</span>
+          <h2>📝 Contact Form</h2>
+          <p>Fill in the details below.</p>
+        </div>
+
+        <form id="contactForm">
+
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              maxlength="100"
+              autocomplete="name"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              maxlength="254"
+              autocomplete="email"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="topic">What is your message about?</label>
+            <select id="topic" name="topic" required>
+              <option value="">Choose a topic</option>
+              <option value="General Question">General Question</option>
+              <option value="Technical Problem">Technical Problem</option>
+              <option value="Feedback">Feedback</option>
+              <option value="Feature Suggestion">Feature Suggestion</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              minlength="10"
+              maxlength="2000"
+              placeholder="Write your message here..."
+              required
+            ></textarea>
+            <div class="character-count">
+              <span id="characterCount">0</span>/2000 characters
+            </div>
+          </div>
+
+          <button type="submit" class="send-button">
+            ✉️ Send Message
+          </button>
+
+          <p id="formStatus" class="form-status" role="status"></p>
+
+        </form>
+      </section>
+
+    </div>
+
+    <footer>
+      <p>🌿 LifeSphere · We're happy to hear from you.</p>
+      <a href="dashboard.html">Return to Dashboard ↑</a>
+    </footer>
+
+  </main>
+
+</body>
+</html>

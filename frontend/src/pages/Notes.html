@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeSphere | My Notes</title>
+  <link rel="stylesheet" href="notes.css">
+  <script src="notes.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+      <a href="dashboard.html" class="brand">🌿 LifeSphere<span>.</span></a>
+    </header>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">YOUR SPACE FOR IDEAS</p>
+        <h1>📝 My Notes</h1>
+        <p>Capture your ideas and keep important thoughts organized.</p>
+      </div>
+      <div class="hero-icon">💡</div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card purple">
+        <div class="stat-icon">📝</div>
+        <p>Total Notes</p>
+        <h2 id="totalNotes">0</h2>
+      </article>
+      <article class="stat-card pink">
+        <div class="stat-icon">✨</div>
+        <p>Ideas & Thoughts</p>
+        <h2 id="ideaNotes">0</h2>
+      </article>
+      <article class="stat-card green">
+        <div class="stat-icon">📅</div>
+        <p>Last Saved</p>
+        <h2 id="lastSaved">—</h2>
+      </article>
+    </section>
+
+    <section class="notes-layout">
+      <section class="card editor-card">
+        <p class="eyebrow">WRITE IT DOWN</p>
+        <h2 id="editorHeading">✍️ Create a Note</h2>
+        <p class="muted">Your ideas matter. Save them here!</p>
+
+        <form id="noteForm">
+          <input type="hidden" id="noteId">
+
+          <label for="noteTitle">Note title</label>
+          <input id="noteTitle" type="text"
+            placeholder="e.g. My goals for this week" maxlength="100" required>
+
+          <label for="noteContent">Note content</label>
+          <textarea id="noteContent" rows="8"
+            placeholder="Write your ideas, reminders, plans, or thoughts..."
+            maxlength="10000" required></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="primary-btn" id="saveButton">💾 Save Note</button>
+            <button type="button" class="secondary-btn" id="cancelEdit" hidden>Cancel Edit</button>
+          </div>
+          <p id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="writing-tip">
+          🌷 <span><strong>A little reminder</strong><br>Every great idea starts with a single thought.</span>
+        </div>
+      </section>
+
+      <section class="card saved-card">
+        <p class="eyebrow">YOUR COLLECTION</p>
+        <h2>📚 Saved Notes</h2>
+        <p class="muted">Your thoughts, all in one place.</p>
+
+        <input id="searchNotes" type="search"
+          placeholder="🔎 Search your notes..." aria-label="Search notes">
+
+        <div id="notesList" class="notes-list">
+          <div class="empty-state">
+            <span>🗒️</span>
+            <h3>No notes yet!</h3>
+            <p>Create your first note and let your ideas grow.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <footer>🌿 LifeSphere — Keep your ideas close and your dreams growing.</footer>
+  </main>
+</body>
+</html>

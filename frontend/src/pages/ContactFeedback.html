@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeSphere | Contact & Feedback</title>
+  <link rel="stylesheet" href="contactfeedback.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="logo">🌿 LifeSphere</div>
+      <h1>Contact & Feedback</h1>
+      <p>We'd love to hear from you. Share your thoughts with us!</p>
+      <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+    </header>
+
+    <section class="welcome-card">
+      <span class="welcome-icon">💌</span>
+      <div>
+        <h2>Your voice matters!</h2>
+        <p>Have a question, suggestion, or problem? Send us your feedback.</p>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <div class="info-card">
+        <h2>📞 Get in Touch</h2>
+        <p>Choose a topic and tell us how we can improve your LifeSphere experience.</p>
+
+        <div class="info-item">
+          <span>💬</span>
+          <div>
+            <h3>General Enquiry</h3>
+            <p>Ask a question about LifeSphere.</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span>💡</span>
+          <div>
+            <h3>Suggestions</h3>
+            <p>Share ideas for new features.</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span>🛠️</span>
+          <div>
+            <h3>Report a Problem</h3>
+            <p>Tell us about something that isn't working.</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span>⭐</span>
+          <div>
+            <h3>Feedback</h3>
+            <p>Let us know what you think.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h2>✍️ Send Your Message</h2>
+        <p class="form-description">Fill in the details below.</p>
+
+        <form id="feedbackForm">
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            maxlength="80"
+            required
+          >
+
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            maxlength="254"
+            required
+          >
+
+          <label for="topic">Select Topic</label>
+          <select id="topic" name="topic" required>
+            <option value="">Choose a topic</option>
+            <option value="General Enquiry">General Enquiry</option>
+            <option value="Suggestion">Suggestion</option>
+            <option value="Bug Report">Bug Report</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="rating">Rate Your Experience</label>
+          <select id="rating" name="rating" required>
+            <option value="">Choose a rating</option>
+            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+            <option value="4">⭐⭐⭐⭐ Good</option>
+            <option value="3">⭐⭐⭐ Average</option>
+            <option value="2">⭐⭐ Poor</option>
+            <option value="1">⭐ Very Poor</option>
+          </select>
+
+          <label for="message">Your Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            minlength="10"
+            maxlength="1000"
+            placeholder="Write your message here..."
+            required
+          ></textarea>
+
+          <div class="character-count">
+            <span id="charCount">0</span>/1000 characters
+          </div>
+
+          <button type="submit" id="submitButton">Send Feedback 💚</button>
+          <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>🌿 LifeSphere — Small steps toward a better life.</p>
+    </footer>
+  </main>
+
+  <script src="contactfeedback.js"></script>
+</body>
+</html>

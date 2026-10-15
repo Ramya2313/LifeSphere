@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | LifeSphere</title>
+
+  <link rel="stylesheet" href="login.css">
+  <script src="signup.js" defer></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f0eaff, #e5eaff);
+    }
+
+    .signup-container {
+      width: 100%;
+      max-width: 440px;
+      padding: 35px;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 10px 35px rgba(50, 35, 90, 0.12);
+    }
+
+    .logo {
+      text-align: center;
+      color: #6c4bd3;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #29243b;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #777;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      color: #383348;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #d8d3e5;
+      border-radius: 9px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #7957dc;
+      box-shadow: 0 0 0 3px rgba(121, 87, 220, 0.12);
+    }
+
+    button {
+      width: 100%;
+      padding: 13px;
+      border: none;
+      border-radius: 9px;
+      background: #6c4bd3;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    button:hover {
+      background: #5638b7;
+    }
+
+    #message {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 22px;
+      color: #666;
+    }
+
+    .login-link a {
+      color: #6c4bd3;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="signup-container">
+    <div class="logo">LifeSphere</div>
+
+    <h2>Create Your Account</h2>
+    <p class="subtitle">Start organizing your life in one place.</p>
+
+    <form id="signupForm">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Enter your full name"
+          autocomplete="name"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          autocomplete="email"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="At least 6 characters"
+          autocomplete="new-password"
+          minlength="6"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          placeholder="Enter your password again"
+          autocomplete="new-password"
+          required
+        >
+      </div>
+
+      <button type="submit">Create Account</button>
+
+      <p id="message" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="login-link">
+      Already have an account?
+      <a href="login.html">Log In</a>
+    </p>
+  </main>
+</body>
+</html>

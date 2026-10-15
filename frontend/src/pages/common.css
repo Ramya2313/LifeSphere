@@ -1,0 +1,257 @@
+
+/* ==================================
+   LifeSphere - Common Colour Theme
+================================== */
+
+:root {
+  --primary: #7054e8;
+  --primary-dark: #4d36b6;
+  --pink: #ec6fae;
+  --blue: #59a8f2;
+  --green: #38c99b;
+  --yellow: #ffd166;
+  --text: #292540;
+  --muted: #77748b;
+  --border: #ebe5f8;
+  --white: #ffffff;
+  --background: #f5f1ff;
+  --shadow: 0 10px 28px rgba(67, 45, 125, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 25px 16px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(
+    135deg,
+    #f0eaff,
+    #fff0f7,
+    #eaf5ff
+  );
+}
+
+.container,
+.page-container,
+.settings-container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Colourful page header */
+header,
+.page-header,
+.hero {
+  padding: 27px;
+  margin-bottom: 24px;
+  border-radius: 22px;
+  color: white;
+  background: linear-gradient(
+    120deg,
+    #6244d5,
+    #9566e9 58%,
+    #ee91c7
+  );
+  box-shadow: 0 12px 30px rgba(115, 82, 223, 0.15);
+}
+
+header h1,
+.page-header h1,
+.hero h1 {
+  margin: 12px 0;
+  font-size: clamp(27px, 4vw, 38px);
+}
+
+header p,
+.page-header p,
+.hero p {
+  color: #f7efff;
+}
+
+.back-link,
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Colourful content cards */
+.card,
+.settings-card,
+.calendar-card,
+.event-form-card,
+.events-card,
+.form-card,
+.content-card,
+.stat-card,
+.tool-card {
+  padding: 23px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.card,
+.settings-card,
+.calendar-card,
+.event-form-card,
+.events-card,
+.form-card,
+.content-card {
+  margin-bottom: 22px;
+}
+
+h2 {
+  color: var(--primary-dark);
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Forms */
+label {
+  display: block;
+  margin: 14px 0 7px;
+  font-weight: 600;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #ded7f0;
+  border-radius: 10px;
+  background: white;
+  color: var(--text);
+  font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 1px;
+}
+
+/* Buttons */
+button,
+.button,
+.btn {
+  padding: 11px 17px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(100deg, #7054e8, #a16ce8);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+button:hover,
+.button:hover,
+.btn:hover {
+  filter: brightness(0.95);
+  transform: translateY(-2px);
+}
+
+/* Colourful grids */
+.grid,
+.cards-grid,
+.tools-grid,
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.purple {
+  border-top: 4px solid #8b75ed;
+}
+
+.pink {
+  border-top: 4px solid #ed81b6;
+}
+
+.blue {
+  border-top: 4px solid #59a8f2;
+}
+
+.green {
+  border-top: 4px solid #38c99b;
+}
+
+.yellow {
+  border-top: 4px solid #ffd166;
+}
+
+/* Saved items */
+.event-item,
+.task-item,
+.note-item,
+.goal-item,
+.transaction {
+  padding: 16px;
+  margin: 12px 0;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--pink);
+  border-radius: 13px;
+  background: linear-gradient(110deg, #f6f1ff, #fff4f9);
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  padding: 20px 5px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  body {
+    padding: 15px 10px;
+  }
+
+  header,
+  .page-header,
+  .hero,
+  .card,
+  .settings-card,
+  .calendar-card,
+  .event-form-card,
+  .events-card,
+  .form-card,
+  .content-card {
+    padding: 17px;
+    border-radius: 16px;
+  }
+
+  .grid,
+  .cards-grid,
+  .tools-grid,
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 390px) {
+  .grid,
+  .cards-grid,
+  .tools-grid,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

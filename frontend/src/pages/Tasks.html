@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeSphere - Task Manager</title>
+  <link rel="stylesheet" href="tasks.css">
+</head>
+<body>
+  <header class="header">
+    <a href="dashboard.html" class="back">← Dashboard</a>
+    <h1>My Tasks ✅</h1>
+    <p>Plan your day. Complete one task at a time.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Add a Task</h2>
+      <form id="taskForm">
+        <label for="taskTitle">Task name</label>
+        <input id="taskTitle" type="text"
+               placeholder="e.g. Study JavaScript" required>
+
+        <label for="taskDate">Due date</label>
+        <input id="taskDate" type="date" required>
+
+        <label for="taskPriority">Priority</label>
+        <select id="taskPriority">
+          <option value="Low">Low</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="High">High</option>
+        </select>
+
+        <button type="submit">+ Add Task</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>My Task List</h2>
+      <p id="emptyMessage">No tasks yet. Add your first task!</p>
+      <div id="taskList"></div>
+    </section>
+  </main>
+
+  <script src="tasks.js"></script>
+</body>
+</html>

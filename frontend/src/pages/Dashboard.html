@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeSphere | Dashboard</title>
+
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#6954e8">
+
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="dashboard.html">🌿 LifeSphere<span>.</span></a>
+    <p class="sidebar-label">YOUR WORKSPACE</p>
+
+    <nav>
+      <a class="nav-link active" href="dashboard.html">🏠 Dashboard</a>
+      <a class="nav-link" href="goals.html">🎯 Goals</a>
+      <a class="nav-link" href="tasks.html">✓ Tasks</a>
+      <a class="nav-link" href="calendar.html">📅 Calendar</a>
+      <a class="nav-link" href="healthwellness.html">🌿 HealthWellness</a>
+      <a class="nav-link" href="studyplanner.html">📚 Study Planner</a>
+      <a class="nav-link" href="notes.html">📝 Notes</a>
+      <a class="nav-link" href="finance.html">💰 Finance</a>
+      <a class="nav-link" href="contact.html">✉️ Contact</a>
+      <a class="nav-link" href="profile.html">👤 Profile</a>
+      <a class="nav-link" href="analytics.html">📊 Analytics</a>
+      <a class="nav-link" href="settings.html">⚙️ Settings</a>
+    </nav>
+
+    <button id="logoutButton" class="logout-button" type="button">
+      ↪ Log out
+    </button>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow" id="todayDate">YOUR PERSONAL SPACE</p>
+        <h1>Your Dashboard</h1>
+        <p>Plan • Organize • Grow</p>
+      </div>
+
+      <div class="profile">
+        <div class="avatar" id="userAvatar">U</div>
+        <span id="userName">Welcome!</span>
+      </div>
+    </header>
+
+    <section class="welcome-banner">
+      <div>
+        <p class="eyebrow light">A FRESH START</p>
+        <h2 id="welcomeHeading">Welcome to LifeSphere!</h2>
+        <p>Small steps every day create a life you love.</p>
+        <a href="goals.html" class="banner-button">
+          Explore your goals →
+        </a>
+      </div>
+      <div class="banner-decoration">✦</div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card purple">
+        <span class="stat-icon">🎯</span>
+        <p>Total Goals</p>
+        <h2 id="goalsCount">0</h2>
+        <span>Goals you are working toward</span>
+      </article>
+
+      <article class="stat-card blue">
+        <span class="stat-icon">✓</span>
+        <p>Pending Tasks</p>
+        <h2 id="tasksCount">0</h2>
+        <span>Tasks waiting for you</span>
+      </article>
+
+      <article class="stat-card green">
+        <span class="stat-icon">📚</span>
+        <p>Study Sessions</p>
+        <h2 id="studyCount">0</h2>
+        <span>Sessions recorded</span>
+      </article>
+
+      <article class="stat-card pink">
+        <span class="stat-icon">📝</span>
+        <p>My Notes</p>
+        <h2 id="notesCount">0</h2>
+        <span>Ideas saved for later</span>
+      </article>
+    </section>
+
+    <!-- Finance summary: updated by dashboard.js -->
+    <section class="finance-dashboard-section">
+      <div class="section-heading">
+        <div>
+          <h2>Your Finances</h2>
+          <p>Your income, spending, and available balance.</p>
+        </div>
+        <a href="finance.html" class="tool-link">
+          Manage finances →
+        </a>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card green">
+          <span class="stat-icon">💰</span>
+          <p>Total Income</p>
+          <h2 id="financeIncome">₹0</h2>
+          <span>Money received</span>
+        </article>
+
+        <article class="stat-card pink">
+          <span class="stat-icon">💸</span>
+          <p>Total Expenses</p>
+          <h2 id="financeExpenses">₹0</h2>
+          <span>Money spent</span>
+        </article>
+
+        <article class="stat-card purple">
+          <span class="stat-icon">🏦</span>
+          <p>Remaining Balance</p>
+          <h2 id="financeBalance">₹0</h2>
+          <span>Income minus expenses</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-heading">
+      <div>
+        <h2>Your LifeSphere tools</h2>
+        <p>Everything you need, all in one place.</p>
+      </div>
+    </section>
+
+    <section class="tools-grid">
+      <a class="tool-card" href="goals.html">
+        <div class="tool-icon purple-icon">🎯</div>
+        <h3>Goals Manager</h3>
+        <p>Set goals, track progress, and celebrate achievements.</p>
+        <span class="tool-link">Open Goals →</span>
+      </a>
+
+      <a class="tool-card" href="tasks.html">
+        <div class="tool-icon blue-icon">✓</div>
+        <h3>Task Manager</h3>
+        <p>Organize daily tasks and keep track of priorities.</p>
+        <span class="tool-link">Open Tasks →</span>
+      </a>
+
+      <a class="tool-card" href="calendar.html">
+        <div class="tool-icon orange-icon">📅</div>
+        <h3>My Calendar</h3>
+        <p>Plan important dates, activities, and events.</p>
+        <span class="tool-link">Open Calendar →</span>
+      </a>
+
+      <a class="tool-card" href="healthwellness.html">
+  <div class="tool-icon pink-icon">🌿</div>
+  <h3>Health & Wellness</h3>
+  <p>Take care of your body and mind, one small step at a time.</p>
+  <span class="tool-link">Explore wellness →</span>
+</a>
+
+      <a class="tool-card" href="study.html">
+        <div class="tool-icon pink-icon">📚</div>
+        <h3>Study Planner</h3>
+        <p>Organize study sessions and monitor learning.</p>
+        <span class="tool-link">Open Study Planner →</span>
+      </a>
+
+      <a class="tool-card" href="notes.html">
+  <div class="tool-icon pink-icon">📝</div>
+  <h3>My Notes</h3>
+  <p>Capture ideas, reminders, and important thoughts.</p>
+  <span class="tool-link">Open My Notes →</span>
+</a>
+
+      <a class="tool-card" href="finance.html">
+        <div class="tool-icon green-icon">💰</div>
+        <h3>Finance Tracker</h3>
+        <p>Track income, expenses, and remaining balance.</p>
+        <span class="tool-link">Open Finance Tracker →</span>
+      </a>
+
+      <a class="tool-card" href="contact.html">
+        <div class="tool-icon blue-icon">✉️</div>
+        <h3>Contact & Feedback</h3>
+        <p>Share your feedback or send us a message.</p>
+        <span class="tool-link">Contact us →</span>
+      </a>
+
+      <a class="tool-card" href="profile.html">
+        <div class="tool-icon pink-icon">👤</div>
+        <h3>My Profile</h3>
+        <p>View and manage your personal information.</p>
+        <span class="tool-link">View profile →</span>
+      </a>
+      
+<a class="tool-card" href="calendar.html">
+  <div class="tool-icon pink-icon">📅</div>
+  <h3>My Calendar</h3>
+  <p>Plan your days and remember important events.</p>
+  <span class="tool-link">View calendar →</span>
+</a>
+
+<a class="tool-card" href="analytics.html">
+  <div class="tool-icon purple-icon">📊</div>
+  <h3>Analytics</h3>
+  <p>Track your finances, study progress, goals, and wellness.</p>
+  <span class="tool-link">View analytics →</span>
+</a>
+<a class="tool-card" href="aiassistant.html">
+  <div class="tool-icon purple-icon">🤖</div>
+  <h3>AI Assistant</h3>
+  <p>Get helpful suggestions for studying, budgeting, wellness, and goals.</p>
+  <span class="tool-link">Chat with AI →</span>
+</a>
+
+<a class="tool-card" href="studyplanner.html">
+  <div class="tool-icon pink-icon">📚</div>
+  <h3>Study Planner</h3>
+  <p>Organize study sessions and monitor learning.</p>
+  <span class="tool-link">Open Study Planner →</span>
+</a>
+
+   <a class="tool-card" href="settings.html">
+        <div class="tool-icon yellow-icon">⚙️</div>
+        <h3>Settings</h3>
+        <p>Manage your preferences and account settings.</p>
+        <span class="tool-link">Open settings →</span>
+      </a>
+      
+<section class="card progress-card">
+  <h2>📊 My LifeSphere Progress</h2>
+  <p>Your progress at a glance.</p>
+
+  <div class="chart-container">
+    <canvas id="progressChart"></canvas>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="dashboard.js"></script>
+
+<button id="logoutButton" class="logout-button" type="button">
+  ↪ Logout
+</button>
+
+<script src="logout.js" defer></script>
+
+    </section>
+<section class="card progress-card">
+  <h2>📊 My LifeSphere Progress</h2>
+  <p>Your progress at a glance.</p>
+
+  <div class="chart-container">
+    <canvas id="progressChart">
+      Your progress graph
+    </canvas>
+  </div>
+</section>
+    <footer>
+      <p>Made with ♥ for a more balanced life · LifeSphere</p>
+      <p>Plan • Organize • Grow 🌱</p>
+    </footer>
+  </main>
+</body>
+</html>

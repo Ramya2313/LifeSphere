@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeSphere | Health & Wellness</title>
+  <link rel="stylesheet" href="HealthWellness.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <a class="brand" href="dashboard.html">LifeSphere 🌿</a>
+      <p class="eyebrow">YOUR WELLNESS JOURNEY</p>
+      <h1>Health & Wellness</h1>
+      <p>Take care of your body and mind, one small step at a time.</p>
+      <a class="back-link" href="dashboard.html">← Back to Dashboard</a>
+    </header>
+
+    <section class="card moment">
+      <p class="eyebrow">A MOMENT FOR YOU</p>
+      <h2>Your well-being matters.</h2>
+      <p>Celebrate progress, listen to your body, and remember to rest.</p>
+      <div class="plant">🌱</div>
+    </section>
+
+    <section class="card">
+      <h2>How are you feeling today?</h2>
+      <p>Choose the mood that best matches your day.</p>
+      <p id="todayDate" class="muted"></p>
+
+      <div class="mood-options">
+        <button type="button" class="mood" data-mood="Amazing">🤩 Amazing</button>
+        <button type="button" class="mood" data-mood="Happy">😊 Happy</button>
+        <button type="button" class="mood" data-mood="Okay">😐 Okay</button>
+        <button type="button" class="mood" data-mood="Stressed">😟 Stressed</button>
+        <button type="button" class="mood" data-mood="Low">😔 Low</button>
+      </div>
+
+      <button type="button" id="saveMood">Save Mood</button>
+      <p id="moodMessage" role="status"></p>
+    </section>
+
+    
+    
+<!-- WATER INTAKE -->
+<section class="card">
+  <h2>💧 Water Intake</h2>
+  <h3><span id="waterCount">0</span> / 8 glasses</h3>
+
+  <button type="button" id="waterMinus">−</button>
+  <button type="button" id="waterPlus">+ Add Glass</button>
+
+  <p>Stay hydrated throughout your day.</p>
+  <div class="progress">
+    <span id="waterProgress"></span>
+  </div>
+</section>
+
+<!-- SLEEP TRACKER -->
+<section class="card">
+  <h2>😴 Sleep</h2>
+  <h3><span id="sleepCount">0.0</span> hours</h3>
+
+  <p>Many adults need 7–9 hours of sleep.</p>
+
+  <button type="button" id="sleepMinus">− 30 min</button>
+  <button type="button" id="sleepPlus">+ 30 min</button>
+</section>
+
+<!-- MOVEMENT TRACKER -->
+<section class="card">
+  <h2>🚶 Movement</h2>
+  <h3><span id="movementCount">0</span> minutes</h3>
+
+  <p>Every bit of movement can count.</p>
+
+  <button type="button" id="movementMinus">− 10 min</button>
+  <button type="button" id="movementPlus">+ 10 min</button>
+</section>
+
+<section class="card">
+  <h2>Daily Self-Care Checklist</h2>
+  <p>Small actions can make a meaningful difference.</p>
+
+  <div class="checklist">
+    <label>
+      <input type="checkbox" class="selfcare">
+      🥗 Eat a nourishing meal
+    </label>
+
+    <label>
+      <input type="checkbox" class="selfcare">
+      🏃 Move my body
+    </label>
+
+    <label>
+      <input type="checkbox" class="selfcare">
+      🧘 Take a mindful break
+    </label>
+
+    <label>
+      <input type="checkbox" class="selfcare">
+      💛 Connect with someone I care about
+    </label>
+
+    <label>
+      <input type="checkbox" class="selfcare">
+      🌙 Make time to rest
+    </label>
+  </div>
+
+  <p>Today's progress: <strong id="checkProgress">0 of 5 completed</strong></p>
+
+  <div class="progress">
+    <span id="checkProgressBar"></span>
+  </div>
+</section>
+
+    
+     
+     <section class="card journal-card">
+  <h2>My Wellness Journal ✍️</h2>
+  <p>Write about your day, your feelings, or something you are grateful for.</p>
+
+  <label for="reflectionDate">Date</label>
+  <input type="date" id="reflectionDate" required>
+
+  <label for="reflection">Today's reflection</label>
+  <textarea id="reflection" rows="5"
+    placeholder="Today I feel... What are you grateful for?"
+    required></textarea>
+
+  <button type="button" id="saveReflection">💾 Save Reflection</button>
+  <p id="reflectionMessage" role="status"></p>
+
+  <h3>Previous Reflections</h3>
+  <div id="reflectionHistory"></div>
+</section>
+
+
+
+    <footer>🌿 Be patient with yourself. Every day is a new opportunity to care for you.</footer>
+  </main>
+
+  <script src="HealthWellness.js"></script>
+</body>
+</html>

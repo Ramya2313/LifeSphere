@@ -1,0 +1,260 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeSphere | Login</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #e9f6ec, #f7fbf7);
+      color: #26372b;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 430px;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 12px 40px rgba(30, 75, 45, 0.12);
+    }
+
+    .brand {
+      text-align: center;
+      color: #26734e;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      text-align: center;
+      color: #718075;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #718075;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #d5e1d7;
+      border-radius: 9px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .form-group input:focus {
+      border-color: #26734e;
+      box-shadow: 0 0 0 3px rgba(38, 115, 78, 0.1);
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+      font-size: 13px;
+    }
+
+    .remember {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    a {
+      color: #26734e;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .login-btn,
+    .google-btn {
+      width: 100%;
+      padding: 13px;
+      border-radius: 9px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-btn {
+      border: none;
+      background: #26734e;
+      color: white;
+    }
+
+    .login-btn:hover {
+      background: #1d5b3d;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #89948c;
+      font-size: 13px;
+      margin: 22px 0;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #e2e9e3;
+    }
+
+    .google-btn {
+      background: white;
+      border: 1px solid #d5e1d7;
+      color: #26372b;
+    }
+
+    .google-btn:hover {
+      background: #f7faf7;
+    }
+
+    .signup-text {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 24px;
+    }
+
+    .footer {
+      text-align: center;
+      color: #89948c;
+      font-size: 12px;
+      margin-top: 25px;
+    }
+
+    .message {
+      font-size: 13px;
+      line-height: 1.5;
+      margin-top: 15px;
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 450px) {
+      .login-card {
+        padding: 25px 20px;
+      }
+
+      .brand {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="login-card">
+    <div class="brand">🌿 LifeSphere</div>
+    <p class="tagline">Plan • Organize • Grow</p>
+
+    <h1>Welcome Back!</h1>
+    <p class="subtitle">
+      Sign in to continue to your LifeSphere.
+    </p>
+
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          autocomplete="username"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+          autocomplete="current-password"
+          required
+        >
+      </div>
+
+      <div class="options">
+        <label class="remember">
+          <input type="checkbox" id="remember">
+          Remember me
+        </label>
+
+        <a href="forgot-password.html" id="forgot">
+          Forgot password?
+        </a>
+      </div>
+
+      <button type="submit" class="login-btn">
+        Log In →
+      </button>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+    </form>
+
+    <div class="divider">OR</div>
+
+    <button type="button" class="google-btn" id="googleLogin">
+      🌐 Continue with Google
+    </button>
+
+    <p class="signup-text">
+      New to LifeSphere?
+      <a href="signup.html" id="signup">Create an account</a>
+    </p>
+
+    <p class="footer">
+      LifeSphere • Small steps, big growth 🌱
+    </p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
